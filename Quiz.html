@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="System.js"></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="quiz"></div>
+        <button onclick="submitQuiz()">Submit</button>
+        <div id="result" class="result"></div>
+    </div>
+</body>
+</html>
