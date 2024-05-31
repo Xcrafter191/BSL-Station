@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title> Home </title>
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            background-image: url("Images/Library.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+        }
+        .heading{
+            text-align: center;
+            color: blueviolet;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 46px;
+        }
+
+        .navi{
+            background-color: rgb(154, 162, 41);
+            overflow: hidden;
+            position: sticky;
+            opacity: 80%;
+        }
+
+        .navi a {
+            color: whitesmoke;
+            text-decoration: none;
+            position: sticky;
+            padding: 15px 50px;
+            font-size: 23px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .navi a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .navi a.active {
+            color: white;
+            background-color: rgb(0, 134, 252);
+        }
+
+        .but {
+            background-color: darkblue;
+            opacity: 60%;
+            height: 100px;
+            width: 300px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 500px;
+            justify-content: center;
+            position: justify;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            text-align: center;
+            transition-duration: 0.4s;
+        }
+
+        .but:hover {
+            background-color: pink;
+            color: black;
+        }
+        </style>
+</head>
+<body>
+    <h1 class="heading"> The Library </h1>
+    <div class="navi">
+        <a class="active" href="home.html"> Home </a>
+        <a href="Materials.html"> Materials </a>
+        <a href="#database"> Database </a>
+        <a href="about.html"> About </a>
+    </div>
+    <a href="Quiz.html">
+    <button class="but" onclick=""> Start Learning! </button>
+    </a>
+</body>
+</html>
