@@ -1,0 +1,33 @@
+body {
+    background-image: url();
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navi{
+    background-color: rgb(65, 5, 114);
+    overflow: hidden;
+    position: sticky;
+    text-align: center;
+}
+
+.navi a {
+    color: whitesmoke;
+    text-decoration: none;
+    position: sticky;
+    padding: 15px 50px;
+    font-size: 23px;
+    text-align: center;
+    display: inline-block;
+}
+
+.navi a:hover {
+    color: black;
+    background-color: white;
+}
+
+.navi a.active {
+    color: white;
+    background-color: blue;
+}
+
