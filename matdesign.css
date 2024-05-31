@@ -1,0 +1,109 @@
+body{
+    background-image:url();
+    margin: 0;
+}
+
+.top{
+    background-color: rgb(110, 41, 145);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.titlesize{
+    font-size: 52px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px black;
+    padding: 10px 100px;
+}
+
+.sub{
+    font-size: 38px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 249, 255);
+    text-shadow: 2px 2px 5px black;
+    padding: 5px 100px;
+}
+
+.navi{
+    background-color: rgb(65, 5, 114);
+    overflow: hidden;
+    position: sticky;
+    text-align: center;
+}
+
+.navi a {
+    color: whitesmoke;
+    text-decoration: none;
+    position: sticky;
+    padding: 15px 50px;
+    font-size: 23px;
+    text-align: center;
+    display: inline-block;
+}
+
+.navi a:hover {
+    color: black;
+    background-color: white;
+}
+
+.navi a.active {
+    color: white;
+    background-color: blue;
+}
+
+.matbox {
+    background-color: white;
+    margin: 0 auto; 
+    width: 98%;
+}
+
+.cardtitle {
+    width: 550px; /* Adjust width as needed */
+    margin: 10px; /* Adjust margins for spacing */
+    border: 1px solid #ece9ed; /* Add a border */
+    padding: 10px; /* Add padding for content spacing */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #1814fa; /* Set background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    color: white;
+    display: flex;
+    font-size: 32px;
+}
+
+.card {
+    width: 550px; /* Adjust width as needed */
+    margin: 10px; /* Adjust margins for spacing */
+    border: 1px solid #ece9ed; /* Add a border */
+    padding: 10px; /* Add padding for content spacing */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #a900fe; /* Set background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    color: white;
+}
+
+#join {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    transform: translate(36%)
+}
+
+.join {
+    width: 550px; /* Adjust width as needed */
+    margin: 10px; /* Adjust margins for spacing */
+    border: 1px solid #ece9ed; /* Add a border */
+    padding: 10px; /* Add padding for content spacing */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #a900fe; /* Set background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    color: white;
+    display: absolute;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
