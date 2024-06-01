@@ -8,7 +8,7 @@
             <h1 class="titlesize"> MySQL </h1>
             <h2 class="sub"> Lesson Materials </h2>
             <div class="navi">
-                <a href="index.html"> Home </a>
+                <a href="home.html"> Home </a>
                 <a class="active" href="Materials.html"> Materials </a>
                 <a href="Database.html"> Database </a>
                 <a href="about.html"> About </a>
@@ -25,8 +25,8 @@
                         column3 datatype,
                        ....
                     );" </p> </h2> 
-                    <h2 class="card"> Drop (Database / Table) <p> Menghapus Database / Tabel "DROP DATABASE databasename; / DROP DATABASE databasename;" </p></h2>
-                    <h2 class="card"> Alter (Database / Table) <p> Menyunting struktur Database / Table yang ada "ALTER TABLE table_name
+                    <h2 class="card"> Drop (Database / Table) <p> Menghapus Database / Tabel "DROP DATABASE databasename; / DROP TABLE tablename;" </p></h2>
+                    <h2 class="card"> Alter (Table) <p> Menyunting struktur Table yang ada "ALTER TABLE table_name
                         ADD column_name datatype;" </p></h2>
                 </div>
                 <br>
@@ -37,12 +37,37 @@
                 <div style="display: flex;"> 
                     <h2 class="card"> Insert (Table)<p> Menambahkan data baru ke dalam Table "INSERT INTO table_name (column1, column2, column3, ...)
                         VALUES (value1, value2, value3, ...);" </p> </h2> 
-                    <h2 class="card"> Update (Table)<p> Memodifikasi data yang sudah ada dalam Table "" </p></h2>
-                    <h2 class="card"> Delete (Table)<p> Menghapus kolom / data dari Table </p></h2>
-                    <h2 class="card"> Select (Table)<p> Mengambil Data dari Table </p></h2>
+                    <h2 class="card"> Update (Table)<p> Memodifikasi data yang sudah ada dalam Table "UPDATE table_name
+                        SET column1 = value1, column2 = value2, ...
+                        WHERE condition;" </p></h2>
+                    <h2 class="card"> Delete (Table)<p> Menghapus kolom / data dari Table "DELETE FROM table_name WHERE condition;" </p></h2>
+                    <h2 class="card"> Select (Table)<p> Mengambil Data dari Table "SELECT CustomerName, City FROM Customers;" </p></h2>
                 </div>
                 <div id="join">
-                    <h1 class="join"> Join (Table) <p> Menggabungkan 2 data atau lebih antar Table </p> </h1>
+                    <h1 class="join"> Join (Table) <p> Menggabungkan 2 data atau lebih antar Table "SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+                        FROM Orders
+                        INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;" </p> </h1>
+                </div>
+                <br>
+                <div style="Display: flex;">
+                    <h3 class="cardtitle"> Advanced </h3>
+                </div>
+                <br>
+                <div style="display:flex;">
+                    <h2 class="card"> Order By <p> Use ORDER column_name BY ASC or DESC to sort data from the selected column "Select * from bookshelf ORDER Author BY ASC;". </p></h2>
+                    <h2 class="card"> WHERE clause (Select, Delete, Update)<p> Used to extract datas that fulfilled specified condition <br> "Select * from bookshelf WHERE author = "Tian";". </p></h2>
+                    <h2 class="card"> And, Or, Not Operators <p> can be combined with WHERE clause. <br> use AND if both condition must be true. <br> use OR if only one condition is true. <br> use NOT if the condition is not TRUE <br> "Select * from bookshelf where Author = "Audrick" AND publisher = "Busur Setengah Lingkaran";" </p></h2>
+                    <h2 class="card"> Limit clause <p> used to specify a number of data to be shown "Select * from bookshelf WHERE author = "Tian" Limit 5;" </p></h2>
+                </div>
+                <div style="display: flex;">
+                    <h2 class="card"> Min, Max <p> Use MIN() to show the smallest value in selected column. <br> Use MAX() to show the largest value in selected column <br> "Select MAX(id) from bookshelf;" "Select MIN(id) from bookshelf;"</p></h2>
+                    <h2 class="card"> SUM, COUNT, AVG <p> Use SUM to add up all the value of selected numeric column. <br> Use COUNT to count the numbers of rows that matches specified condition. <br> Use AVG to make an average value of a numeric column. <br> "Select COUNT(book_name) from bookshelf where publisher = "Wangsheng Funeral Parlor";"</p></h2>
+                    <h2 class="card"> LIKE <p> Used like WHERE clause to find certain data with specified pattern <br> "Select book_name from bookshelf WHERE book_name LIKE 'a%';" (Meaning: show book name column from bookshelf table that starts with an "a")</p></h2>
+                    <h2 class="card"> Wildcard (%, _)<p> '%'' represent 0. 'br%' can find 'brick, broad, bread, break'. <br> '_' represent a single character. 'p_t' can find 'pet, pat, put, pot' <br> "select * from bookshelf WHERE author LIKE '_e%';" (Meaning: show data from bookshelf table with an author name that has 'e' as the second letter of the name)</p></h2>
+                </div>
+                <br>
+                <div style="display: flex;">
+                    <h2 class="card"> Group By <p> Used to show rows that has the same values. <br> Often used with SUM, AVG, COUNT, MIN, MAX <br> Use MAX() to show the largest value in selected column <br> "Select MAX(id) from bookshelf;" "Select MIN(id) from bookshelf;"</p></h2>
                 </div>
             </div>
         </div>
