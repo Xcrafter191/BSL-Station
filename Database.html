@@ -1,69 +1,317 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> Database </title>
-        <style>
-            body{
-                text-align: center;
-            }
-        .top{
-        background-color: rgb(110, 41, 145);
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        }
+<head>
+  <title>Database</title>
+  <style>
+    body {
+      text-align: center;
+    }
 
-        .titlesize{
-        font-size: 52px;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        color: rgb(255, 255, 255);
-        text-shadow: 2px 2px 10px black;
-        padding: 10px 100px;
-        }
+    .top {
+      background-color: rgb(110, 41, 145);
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
 
-        .sub{
-        font-size: 38px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: rgb(255, 249, 255);
-        text-shadow: 2px 2px 5px black;
-        padding: 5px 100px;
-        }
+    .titlesize {
+      font-size: 52px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 2px 10px black;
+      padding: 10px 100px;
+    }
 
-        .navi{
-            background-color: rgb(154, 162, 41);
-            overflow: hidden;
-            position: sticky;
-            opacity: 80%;
-        }
+    .sub {
+      font-size: 38px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(255, 249, 255);
+      text-shadow: 2px 2px 5px black;
+      padding: 5px 100px;
+    }
 
-        .navi a {
-            color: whitesmoke;
-            text-decoration: none;
-            position: sticky;
-            padding: 15px 50px;
-            font-size: 23px;
-            text-align: center;
-            display: inline-block;
-        }
+    .navi {
+      background-color: rgb(154, 162, 41);
+      overflow: hidden;
+      position: sticky;
+      opacity: 80%;
+    }
 
-        .navi a:hover {
-            color: black;
-            background-color: rgb(232, 240, 84);
-        }
+    .navi a {
+      color: whitesmoke;
+      text-decoration: none;
+      position: sticky;
+      padding: 15px 50px;
+      font-size: 23px;
+      text-align: center;
+      display: inline-block;
+    }
 
-        .navi a.active {
-            color: white;
-            background-color: rgb(0, 134, 252);
-        }
-            </style>
-    </head>
-    <body>
-        <div class="top">
-            <h1 class="titlesize"> Database </h1>
-            <div class="navi">
-                <a href="index.html"> Home </a>
-                <a href="Materials.html"> Materials </a>
-                <a class="active" href="Database.html"> Database </a>
-                <a href="about.html"> About </a>
+    .navi a:hover {
+      color: black;
+      background-color: rgb(232, 240, 84);
+    }
+
+    .navi a.active {
+      color: white;
+      background-color: rgb(0, 134, 252);
+    }
+
+    .databaseFlex {
+      display: flex;
+      /* Adjust this value to control the width of each content element */
+      width: 100%;
+      justify-content: center; /* Center content horizontally within the flex container */
+      align-items: center;  /* Center content vertically within the flex container */
+    }
+
+    .databaseFlex > * {  /* Target all child elements of .databaseFlex */
+      border: 1px solid black; /* Add a border for styling purposes */
+      padding: 10px;
+    }
+
+    /* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+  </style>
+</head>
+<body>
+  <div class="top">
+    <h1 class="titlesize">Database</h1>
+    <div class="navi">
+      <a href="index.html">Home</a>
+      <a href="Materials.html">Materials</a>
+      <a class="active" href="Database.html">Database</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+  <div class="databaseFlex">
+    <div><style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 15px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 15px;word-break:normal;}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg"><thead>
+          <tr>
+            <th class="tg-0pky">book_id</th>
+            <th class="tg-0pky">book_name</th>
+            <th class="tg-0pky">genre</th>
+            <th class="tg-0lax">price</th>
+            <th class="tg-0pky">author</th>
+            <th class="tg-0pky">publisher</th>
+          </tr></thead>
+        <tbody>
+          <tr>
+            <td class="tg-0pky">1</td>
+            <td class="tg-0pky">Once upon a SQL</td>
+            <td class="tg-0pky">fantasy</td>
+            <td class="tg-0lax">50000</td>
+            <td class="tg-0pky">tian</td>
+            <td class="tg-0pky">Busur Setengah Lingkaran</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">2</td>
+            <td class="tg-0pky">Library at Heart of Nowhere</td>
+            <td class="tg-0pky">fantasy</td>
+            <td class="tg-0lax">35000</td>
+            <td class="tg-0pky">audrick</td>
+            <td class="tg-0pky">Busur Setengah Lingkaran</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">3</td>
+            <td class="tg-0pky">Nusa Legacy</td>
+            <td class="tg-0pky">fantasy</td>
+            <td class="tg-0lax">45000</td>
+            <td class="tg-0pky">kenneth</td>
+            <td class="tg-0pky">Busur Setengah Lingkaran</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">4</td>
+            <td class="tg-0pky">Haunted House in the South</td>
+            <td class="tg-0pky">horror</td>
+            <td class="tg-0lax">50000</td>
+            <td class="tg-0pky">tian</td>
+            <td class="tg-0pky">Big House Publishing Co.</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">5</td>
+            <td class="tg-0pky">Life of Sigma</td>
+            <td class="tg-0pky">comedy</td>
+            <td class="tg-0lax">60000</td>
+            <td class="tg-0pky">tian</td>
+            <td class="tg-0pky">Skibidi Publishing House</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">6</td>
+            <td class="tg-0pky">Hu tao horror stories</td>
+            <td class="tg-0pky">horror</td>
+            <td class="tg-0lax">25000</td>
+            <td class="tg-0pky">hu tao</td>
+            <td class="tg-0pky">Wangsheng funeral parlor</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">7</td>
+            <td class="tg-0pky">Legend of 7 wonders</td>
+            <td class="tg-0pky">documentary</td>
+            <td class="tg-0lax">70000</td>
+            <td class="tg-0pky">tian</td>
+            <td class="tg-0pky">Busur Setengah Lingkaran</td>
+          </tr>
+        </tbody></table>
+    </div>
+    <div>
+        <div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;book_id</div>
+<div class="divTableCell">&nbsp;customer_name</div>
+<div class="divTableCell">&nbsp;amount</div>
+<div class="divTableCell">customer_id&nbsp;</div>
+<div class="divTableCell">borrowed_books&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;Furina</div>
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;Once upon a SQL</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;4</div>
+<div class="divTableCell">&nbsp;Billy</div>
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;2</div>
+<div class="divTableCell">&nbsp;Haunted House in the South</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;2</div>
+<div class="divTableCell">&nbsp;Bob</div>
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;3</div>
+<div class="divTableCell">&nbsp;Library at Heart of Nowhere</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;5</div>
+<div class="divTableCell">&nbsp;John</div>
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;4</div>
+<div class="divTableCell">&nbsp;Life of Sigma</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;3</div>
+<div class="divTableCell">&nbsp;Hu Tao</div>
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;5</div>
+<div class="divTableCell">&nbsp;Nusa Legacy</div>
+</div>
+
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;6</div>
+<div class="divTableCell">&nbsp;Zhongli</div>
+<div class="divTableCell">&nbsp;1</div>
+<div class="divTableCell">&nbsp;6</div>
+<div class="divTableCell">&nbsp;Hu tao horror stories</div>
+</div>
+
+<div class="divTableRow">
+    <div class="divTableCell">&nbsp;7</div>
+    <div class="divTableCell">&nbsp;Xingqiu</div>
+    <div class="divTableCell">&nbsp;1</div>
+    <div class="divTableCell">&nbsp;7</div>
+    <div class="divTableCell">&nbsp;Legend of 7 wonders</div>
+    </div>
+</div>
+</div>
+</div>
+<!-- DivTable.com -->
+    </div>
+    <div>
+        <div class="divTable">
+            <div class="divTableBody">
+            <div class="divTableRow">
+            <div class="divTableCell">&nbsp;Customer_id</div>
+            <div class="divTableCell">&nbsp;Customer_name</div>
+            <div class="divTableCell">&nbsp;Order Date</div>
+            <div class="divTableCell">Address&nbsp;</div>
             </div>
-    </body>
-    </html>
+            <div class="divTableRow">
+            <div class="divTableCell">&nbsp;1</div>
+            <div class="divTableCell">&nbsp;Furina</div>
+            <div class="divTableCell">&nbsp;30-09-2024</div>
+            <div class="divTableCell">&nbsp;Fontaine</div>
+            </div>
+            <div class="divTableRow">
+            <div class="divTableCell">&nbsp;2</div>
+            <div class="divTableCell">&nbsp;Billy</div>
+            <div class="divTableCell">&nbsp;19-01-2023</div>
+            <div class="divTableCell">&nbsp;TKI</div>
+            </div>
+            <div class="divTableRow">
+            <div class="divTableCell">&nbsp;3</div>
+            <div class="divTableCell">&nbsp;Bob</div>
+            <div class="divTableCell">&nbsp;04-04-2023</div>
+            <div class="divTableCell">&nbsp;TKI</div>
+            </div>
+            <div class="divTableRow">
+            <div class="divTableCell">&nbsp;4</div>
+            <div class="divTableCell">&nbsp;John&nbsp;</div>
+            <div class="divTableCell">&nbsp;06-07-2023</div>
+            <div class="divTableCell">&nbsp;Rahayu</div>
+            </div>
+            <div class="divTableRow">
+            <div class="divTableCell">&nbsp;5</div>
+            <div class="divTableCell">&nbsp;Hu Tao</div>
+            <div class="divTableCell">&nbsp;05-07-2024</div>
+            <div class="divTableCell">&nbsp;Rahayu</div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">&nbsp;6</div>
+                <div class="divTableCell">&nbsp;Zhongli</div>
+                <div class="divTableCell">&nbsp;05-07-2024</div>
+                <div class="divTableCell">&nbsp;Rahayu</div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">&nbsp;7</div>
+                    <div class="divTableCell">&nbsp;Xingqiu</div>
+                    <div class="divTableCell">&nbsp;05-07-2024</div>
+                    <div class="divTableCell">&nbsp;Rahayu</div>
+                    </div>
+            </div>
+            </div>
+            <!-- DivTable.com -->
+    </div>
+  </div>
+</body>
+</html>
