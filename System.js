@@ -55,8 +55,24 @@ const quizData = [
       question: "Which book ends with an 'h'",
       options: ["SELECT book_name FROM bookshelf LIKE '%h%'", "SELECT book_name FROM bookshelf LIKE '%h'", "SELECT book_name FROM bookshelf LIKE '%h_'", "SELECT book_name FROM bookshelf LIKE '_h%'"],
       correct: "SELECT book_name FROM bookshelf LIKE 'h%'"
-  }
-];
+    },
+    {
+      question: "Show me books that were published by Busur Setengah Lingkaran with Kenneth as the author",
+      options: ["SELECT book_name FROM bookshelf WHERE publisher = 'BSL', author = 'keneth';", "SELECT book_name FROM bookshelf WHERE publisher = 'PSL', author = 'kenneth';", "SELECT book_name FROM bookshelf WHERE publisher = 'BSL', author = 'kenneth';", "SELECT book_name FROM bookshelf WHERE publisher = 'BSL', author = 'knth';"],
+      correct: "SELECT book_name FROM bookshelf WHERE publisher = 'BSL', author = 'keneth';"
+    },
+    {
+      question: "Which column has a Primary key?",
+      options: ["Id", "book_name", "genre", "author", "publisher"],
+      correct: "Id"
+    },
+    {
+      question: "From the order_lists table, which column has an integer data type?",
+      options: ["Book_id", "book_name", "genre", "author", "publisher"],
+      correct: "Id"
+    }
+
+  ];
 
 let currentQuestion = 0;
 let score = 0;
