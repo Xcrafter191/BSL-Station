@@ -54,7 +54,7 @@
                 </div>
                 <br>
                 <div style="display:flex;">
-                    <h2 class="card"> Order By <p> Use ORDER column_name BY ASC or DESC to sort data from the selected column "Select * from bookshelf ORDER Author BY ASC;". </p></h2>
+                    <h2 class="card"> Order By <p> Use ORDER column_name BY ASC or DESC to sort data from the selected column <br> "Select * from bookshelf ORDER Author BY ASC;". </p></h2>
                     <h2 class="card"> WHERE clause (Select, Delete, Update)<p> Used to extract datas that fulfilled specified condition <br> "Select * from bookshelf WHERE author = "Tian";". </p></h2>
                     <h2 class="card"> And, Or, Not Operators <p> can be combined with WHERE clause. <br> use AND if both condition must be true. <br> use OR if only one condition is true. <br> use NOT if the condition is not TRUE <br> "Select * from bookshelf where Author = "Audrick" AND publisher = "Busur Setengah Lingkaran";" </p></h2>
                     <h2 class="card"> Limit clause <p> used to specify a number of data to be shown "Select * from bookshelf WHERE author = "Tian" Limit 5;" </p></h2>
@@ -62,12 +62,14 @@
                 <div style="display: flex;">
                     <h2 class="card"> Min, Max <p> Use MIN() to show the smallest value in selected column. <br> Use MAX() to show the largest value in selected column <br> "Select MAX(id) from bookshelf;" "Select MIN(id) from bookshelf;"</p></h2>
                     <h2 class="card"> SUM, COUNT, AVG <p> Use SUM to add up all the value of selected numeric column. <br> Use COUNT to count the numbers of rows that matches specified condition. <br> Use AVG to make an average value of a numeric column. <br> "Select COUNT(book_name) from bookshelf where publisher = "Wangsheng Funeral Parlor";"</p></h2>
-                    <h2 class="card"> LIKE <p> Used like WHERE clause to find certain data with specified pattern <br> "Select book_name from bookshelf WHERE book_name LIKE 'a%';" (Meaning: show book name column from bookshelf table that starts with an "a")</p></h2>
-                    <h2 class="card"> Wildcard (%, _)<p> '%'' represent 0. 'br%' can find 'brick, broad, bread, break'. <br> '_' represent a single character. 'p_t' can find 'pet, pat, put, pot' <br> "select * from bookshelf WHERE author LIKE '_e%';" (Meaning: show data from bookshelf table with an author name that has 'e' as the second letter of the name)</p></h2>
+                    <h2 class="card"> LIKE <p> Used like WHERE clause to find certain data with specified pattern <br> "Select book_name from bookshelf WHERE book_name LIKE 'a%';" <br> <br> (Meaning: show book name column from bookshelf table that starts with an "a")</p></h2>
+                    <h2 class="card"> Wildcard (%, _)<p> '%'' represent 0. 'br%' can find 'brick, broad, bread, break'. <br> '_' represent a single character. 'p_t' can find 'pet, pat, put, pot' <br> "select * from bookshelf WHERE author LIKE '_e%';" <br> <br> (Meaning: show data from bookshelf table with an author name that has 'e' as the second letter of the name)</p></h2>
                 </div>
                 <br>
                 <div style="display: flex;">
                     <h2 class="card"> Group By <p> Used to show rows that has the same values. <br> Often used with SUM, AVG, COUNT, MIN, MAX <br> Use MAX() to show the largest value in selected column <br> "Select MAX(id) from bookshelf;" "Select MIN(id) from bookshelf;"</p></h2>
+                    <h2 class="card"> Primary Key <p> Primary Key is a unique key used to contain unique value and not NULL value <br> 1 Table can only have 1 primary key however, Primary key can consist of multiple columns <br> "Create table customer_lists(Customer_id int PRIMARY KEY AUTO_INCREMENT, customer_name varchar(225), address varchar(225));" <br> <br>(Note. AUTO INCREMENT is used to automatically generate unique value for each new row inserted). </p></h2>
+                    <h2 class="card"> Foreign Key <p> Used to establish link between two tables to a Primary Key <br> "Create table order_lists(Order_Id int AUTO_INCREMENT, Book_Amount int, Order_Date varchar(255), Customer_id int, FOREIGN KEY (Customer_id) REFERENCES customers_lists(Customer_id));"</p></h2>
                 </div>
             </div>
         </div>
