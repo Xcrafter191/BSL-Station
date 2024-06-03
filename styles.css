@@ -31,7 +31,7 @@ body {
 
 .container {
     display: flex;
-    max-height:65dvh; /* 100vh = 100% viewport height */
+    max-height:60dvh; /* 100vh = 100% viewport height */
     
   }
   
