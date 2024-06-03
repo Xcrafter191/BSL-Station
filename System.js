@@ -70,6 +70,41 @@ const quizData = [
       question: "From the order_lists table, which column has an integer data type?",
       options: ["Book_id", "book_name", "genre", "author", "publisher"],
       correct: "Id"
+    },
+    {
+      question: "From the order_lists table, which column has a primary key",
+      options: ["Book_id", "book_name", "genre", "author", "publisher"],
+      correct: "Id"
+    },
+    {
+      question: "From the order_lists table, which column has a foreign key?",
+      options: ["Book_id", "book_name", "genre", "author", "none"],
+      correct: "none"
+    },
+    {
+      question: "Show me from customerlists table, customers that are from rahayu",
+      options: ["SELECT * FROM customerlists WHERE Address = 'Rahayu'", "SELECT * FROM customerlists WHERE Address = 'TKI'", "SELECT * FROM customerlists WHERE Address = 'Furina'", "SELECT Address = Rahayu FROM customerlists", "Address = Rahayu"],
+      correct: "SELECT * FROM customerlists WHERE Address = 'Rahayu'"
+    },
+    {
+      question: "From the customerlists table, which column has a primary key",
+      options: ["customer_id", "customer_name", "address", "none of above"],
+      correct: "customer_id"
+    },
+    {
+      question: "Show me order date from the earliest to the lastest",
+      options: ["SELECT * FROM customerlists ORDER BY order_date ASC", "SELECT * FROM customerlists ORDER BY order_date DESC", "SELECT * FROM orderlists ORDER BY order_date ASC", "SELECT * FROM orderlists ORDER BY order_date DESC"],
+      correct: "SELECT * FROM customerlists ORDER BY order_date ASC"
+    },
+    {
+      question: "Join the orderlist with customerlist",
+      options: ["SELECT * FROM customerlists.customer_id orderlists.customer_id FROM customerlists JOIN customerlists ON customerlists.customer_id = orderlists.customer_id", "SELECT * FROM customerlists.customer_id, orderlists.customer_id FROM customerlists JOIN customerlists = orderlists.customer_id", "SELECT * FROM customerlists.customer_id, orderlists.customer_id FROM customerlists JOIN customerlists", "JOIN * FROM orderlists ORDER BY ORDERLISTS"],
+      correct: "SELECT * FROM customerlists.customer_id orderlists.customer_id FROM customerlists JOIN customerlists ON customerlists.customer_id = orderlists.customer_id"
+    },
+    {
+      question: "Join the orderlists with library",
+      options: ["SELECT * FROM customerlists.customer_id orderlists.customer_id FROM customerlists JOIN customerlists ON customerlists.customer_id = orderlists.customer_id", "SELECT * FROM library.book_id, orderlists.book_id FROM orderlists JOIN library ON library.book_id = orderlists.book_id", "SELECT * FROM customerlists.customer_id, orderlists.customer_id FROM customerlists JOIN customerlists ON customerlists.customer_id = orderlists.customer_id", "none of above"],
+      correct: "SELECT * FROM library.book_id, orderlists.book_id FROM orderlists JOIN library ON library.book_id = orderlists.book_id"
     }
 
   ];
@@ -92,7 +127,7 @@ function loadQuiz() {
           ${currentQuizItem.options.map((option, index) => `
             <li>
               <label>
-                <input type="radio" name="question" value="${option}" ${userAnswers[currentQuestion] === option ? 'checked' : ''}>
+                <input class="radio" type="radio" name="question" value="${option}" ${userAnswers[currentQuestion] === option ? 'checked' : ''}>
                 ${option}
               </label>
             </li>
