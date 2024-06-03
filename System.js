@@ -72,16 +72,6 @@ const quizData = [
       correct: "Id"
     },
     {
-      question: "From the order_lists table, which column has a primary key",
-      options: ["Book_id", "book_name", "genre", "author", "publisher"],
-      correct: "Id"
-    },
-    {
-      question: "From the order_lists table, which column has a foreign key?",
-      options: ["Book_id", "book_name", "genre", "author", "none"],
-      correct: "none"
-    },
-    {
       question: "Show me from customerlists table, customers that are from rahayu",
       options: ["SELECT * FROM customerlists WHERE Address = 'Rahayu'", "SELECT * FROM customerlists WHERE Address = 'TKI'", "SELECT * FROM customerlists WHERE Address = 'Furina'", "SELECT Address = Rahayu FROM customerlists", "Address = Rahayu"],
       correct: "SELECT * FROM customerlists WHERE Address = 'Rahayu'"
